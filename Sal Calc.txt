@@ -1,0 +1,60 @@
+\#!/bin/bash
+sal(){
+echo " "
+echo "MENU"
+echo " "
+echo "1.Sal of director" 
+echo "2.Sal of Manager"
+echo "3.Sal of Project"
+echo "4.Sal of Program" 
+echo " "
+echo "Enter your choice: " 
+read a
+
+case "$a" in
+1)
+echo "Sal of Director"
+echo "The benefit of the director is"
+read be1
+echo "The bonus of director is"
+read bo1
+echo "The deduction of director is"
+read de1
+sa1=$(echo "$be1 + $bo1 - $de1"|bc)
+echo "Sal of Director is : $sa1"
+;;
+2)
+echo "Sal of Manager"
+echo "The benefit of manager is"
+read be2
+echo "The bonus of manager is"
+read bo2
+echo "The deduction of manager is"
+read de2
+sa2=$(echo "$be2 + $bo2 - $de2"|bc)
+echo "Sal of Manager is : $sa2"
+;;
+3)
+echo "Sal of Project Manager"
+echo "The benefit of project manager is"
+read be3
+echo "The bonus of project manager is"
+read bo3
+echo "The deduction of project manager is"
+read de3
+sa3=$(echo "$be3 + $bo3 -$de3"|bc)
+echo "Sal of Project Manager is : $sa3"
+;;
+4)
+echo "Sal of Programmer"
+echo "The benefit of programmer is"
+read be4
+echo "The bonus of programmer is"
+read bo4
+echo "The deduction of programmer is"
+read de4
+sa4=$(echo "$be4 + $bo4 - $de4"|bc)
+echo "Sal of Programmer is : $sa4"
+;;
+esac }
+sal
